@@ -165,10 +165,11 @@ export default class Renderer {
             !container.style.background.backgroundColor.isTransparent() ||
             container.style.background.backgroundImage.length;
 
-        const renderableBorders = container.style.border.filter(
-            border =>
-                border.borderStyle !== BORDER_STYLE.NONE && !border.borderColor.isTransparent()
-        );
+        // const renderableBorders = container.style.border.filter(
+        //     border =>
+        //         border.borderStyle !== BORDER_STYLE.NONE && !border.borderColor.isTransparent()
+        // );
+        const renderableBorders = container.style.border;
 
         const callback = () => {
             const backgroundPaintingArea = calculateBackgroungPaintingArea(
